@@ -7,6 +7,6 @@ const navigationDiv = new Element("//div[@role='navigation']", "Navigation div o
 export class MainPage extends Page {
   
   getTitleText = () => pageTitleText.getText()
-  waitForNavigationDivToBeVisible = () => navigationDiv.waitUntilVisible();
+  waitForMainPageElementToLoad = () => navigationDiv.waitUntilVisible();
 
 }

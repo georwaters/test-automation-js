@@ -1,4 +1,4 @@
-const { logTestName, logTestEnd, logStep } = require('../core/logger')
+const { logStep } = require('../core/logger')
 
 exports.config = {
     //
@@ -202,7 +202,6 @@ exports.config = {
     global.expect = chai.expect
     chai.Should()
     console.log({feature})
-    logTestName(feature.feature.name)
   },
   /**
    * Runs before a Cucumber scenario
