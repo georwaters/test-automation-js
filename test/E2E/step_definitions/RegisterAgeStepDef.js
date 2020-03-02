@@ -1,6 +1,6 @@
 import { RegisterAgePage } from '../pageObjects'
-import { Given, Then, When } from 'cucumber'
-import { getCurrentUrl, waitFor } from '../core/browser'
+import { Then, When } from 'cucumber'
+import { getCurrentUrl } from '../core/browser'
 
 When(/^I input and submit birthdate: ([^"]*)$/, (date) => {
   let res = date.split("/");

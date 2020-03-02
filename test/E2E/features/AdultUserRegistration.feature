@@ -5,7 +5,7 @@ Feature: I register a User that is older than 13 years
   Background:
     Given I am on the Registration Page
 
-  @LP-0010
+  @LP-0014
   Scenario: I should register a User
     And I click on 13 or over button
     Then I am on the AGE Page

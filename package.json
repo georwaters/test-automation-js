@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "default": "npm run lint && npm run prettier",
-    "lint": "npx eslint tests/**/*.js",
-    "prettier": "node scripts/lintPrettier",
     "test:local": "wdio test/E2E/config/wdio.conf.js"
   },
   "repository": {
@@ -40,10 +37,8 @@
     "chromedriver": "^80.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.2",
     "cucumber": "6.0.5",
     "lodash": "4.17.15",
-    "prettier": "1.18.2",
     "webdriverio": "5.18.7"
   },
   "babel": {

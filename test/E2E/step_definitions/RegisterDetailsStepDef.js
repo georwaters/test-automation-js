@@ -2,9 +2,11 @@ import { RegisterDetailsPage } from '../pageObjects'
 import { When, Then } from 'cucumber'
 import { getCurrentUrl } from '../core/browser'
 
+const simpleUser = require('../helpers/data/user-data.json')
+
 const correctUser = {
   username: RegisterDetailsPage.getUniqueUserId(),
-  password: 'Testpassword1234!',
+  password: simpleUser.data.password,
 }
 
 When(/^I input Email address and Password and submit$/, () => {

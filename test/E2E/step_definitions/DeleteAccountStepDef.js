@@ -1,13 +1,13 @@
 import { DeleteAccountPage } from '../pageObjects'
-import { Given, Then, When } from 'cucumber'
-import { getCurrentUrl, waitFor, openUrl, openPath } from '../core/browser'
+import { Then } from 'cucumber'
+import { openPath } from '../core/browser'
 
-const password = "Testpassword1234!";
+const simpleUser = require('../helpers/data/user-data.json')
 
 Then(/^I go to delete my account page$/, () => {
   openPath("/account/settings/delete")
 })
 
 Then(/^I delete my account$/, () => {
-  DeleteAccountPage.deleteAccount(password);
+  DeleteAccountPage.deleteAccount(simpleUser.data.password);
 })

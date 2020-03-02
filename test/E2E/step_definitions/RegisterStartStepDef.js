@@ -1,5 +1,5 @@
 import { RegisterStartPage } from '../pageObjects'
-import { Given, Then, When } from 'cucumber'
+import { Given, Then } from 'cucumber'
 
 Given(/^I am on the Registration Page$/, () => {
   const expectedText = 'Let’s start. This account is for someone who is...';
