@@ -3,7 +3,8 @@
 ## To view allure results: 
 
 ```
-run tests
+yarn install
+npm run test:local
 
 cd ./reports/allure-results
 npx allure generate
