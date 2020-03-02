@@ -1,9 +1,8 @@
 import { Page } from './Page'
-import { Button, TextField, Element } from '../core/ui'
-import { waitFor } from '../core/browser'
+import { Button, TextField } from '../core/ui'
 
-const passwordTextField = new TextField("//input[@id='password-input']", "")
-const submitButton = new Button("//button[@class='button']", "")
+const passwordTextField = new TextField("//input[@id='password-input']", "Password text field")
+const submitButton = new Button("//button[@class='button']", "Submit button")
 
 export class DeleteAccountPage extends Page {
   deleteAccount = (password) => {
