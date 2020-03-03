@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:local": "wdio test/E2E/config/wdio.conf.js"
+    "test:local": "wdio test/E2E/config/wdio.conf.js",
+    "test:docker": "wdio test/E2E/config/wdio.conf.docker.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "cucumber": "6.0.5",
     "lodash": "4.17.15",
+    "wdio-docker-service": "^2.3.0",
     "webdriverio": "5.18.7"
   },
   "babel": {

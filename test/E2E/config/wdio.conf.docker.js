@@ -110,7 +110,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services: ['docker'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -151,6 +151,15 @@ exports.config = {
         colors: true, // <boolean> disable colors in formatter output
         timeout: 60000, // <number> timeout for step definitions
     },
+
+    dockerOptions: {
+      image: 'selenium/standalone-chrome',
+      healthCheck: 'http://localhost:4444',
+      options: {
+          p: ['4444:4444'],
+          shmSize: '2g'
+      }
+  },
     //
   // =====
   // Hooks
@@ -201,7 +210,7 @@ exports.config = {
     chai.use(chaiPageObjects(browser))
     global.expect = chai.expect
     chai.Should()
-    console.log({feature})
+    //console.log({feature})
   },
   /**
    * Runs before a Cucumber scenario
