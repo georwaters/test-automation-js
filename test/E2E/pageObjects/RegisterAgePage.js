@@ -8,6 +8,7 @@ const continueButton = new Button("//button[@id='submit-button']","Continue butt
 
 export class RegisterAgePage extends Page {
   inputBirthDate = (day, month, year) => {
+    this.spinnerNotVisible();
     dayTextField.setValue(day);
     monthTextField.setValue(month);
     yearTextField.setValue(year);
